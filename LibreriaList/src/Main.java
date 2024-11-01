@@ -2,17 +2,16 @@ import Mensola.Libro;
 import Screen.FrontEnd;
 
 import static Utility.Tools.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        String[] opzioni = {"menu", "Inserimento", "Visualizzazione", "Elimina", "Esci"};   //opzioni del menù
-        ArrayList<Libro> mensola = new ArrayList<Libro>();  //lista di libri
-        String titolo;
+    public static void main(String[] args) {
+        String[] opzioni = {"menu", "Inserimento", "Visualizzazione", "Ricerca", "Esci"};   //opzioni del menù
+        ArrayList<Libro> mensola = new ArrayList<>();  //lista di libri
         Scanner tastiera = new Scanner(System.in);
-        Boolean exit = true;
+        boolean exit = true;
+        String titolo;
         do{
             switch(Menu(opzioni,tastiera))
             {
@@ -22,9 +21,8 @@ public class Main {
                     System.out.println("inserisci il titolo del libro che vuoi eliminare");
                     titolo = tastiera.nextLine();
                     FrontEnd.Elimina(mensola,titolo);}
-                case 4 ->{exit = false;}
+                case 4 -> exit = false;
                 }
-
         }while(exit);
     }
 }

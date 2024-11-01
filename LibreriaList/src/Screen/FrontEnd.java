@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FrontEnd {
-    public static void Inserimento(ArrayList<Libro> mensola) throws Exception
+    public static void Inserimento(ArrayList<Libro> mensola)
     {
         boolean check = true;
         Scanner tastiera = new Scanner(System.in);
@@ -20,17 +20,19 @@ public class FrontEnd {
         System.out.println("Inserisci il genere del libro: [1] Romanzo - [2] Thriller - [3] Fantascienza - [4] Horror - [5] Avventura");
         do {
             switch (Integer.parseInt(tastiera.nextLine())) {
-                case 1 -> {libro.Genere = GenereLibro.Romanzo;check = false;}
-
-                case 2 -> {libro.Genere = GenereLibro.Thriller;check = false;}
-
-                case 3 -> {libro.Genere = GenereLibro.Fantascienza;check = false;}
-
-                case 4 -> {libro.Genere = GenereLibro.Horror;check = false;}
-
-                case 5 -> {libro.Genere = GenereLibro.Avventura;check = false;}
-
-                default -> {System.out.println("Genere non valido");}
+                case 1 -> {
+                    libro.Genere = GenereLibro.Romanzo;check = false;}
+                case 2 -> {
+                    libro.Genere = GenereLibro.Thriller;check = false;}
+                case 3 -> {
+                    libro.Genere = GenereLibro.Fantascienza;check = false;}
+                case 4 -> {
+                    libro.Genere = GenereLibro.Horror;check = false;
+                }
+                case 5 -> {
+                    libro.Genere = GenereLibro.Avventura;check = false;
+                }
+                default -> System.out.println("Genere non valido");
             }
         }while(check);
         mensola.add(libro);
