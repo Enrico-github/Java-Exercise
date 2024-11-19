@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String[] opzioni = {"menu", "Inserimento", "Visualizzazione", "Ricerca", "Esci"};   //opzioni del menù
+        String[] opzioni = {"menu", "Inserimento", "Visualizzazione", "Ricerca", "ScorriLibri", "Esci"};   //opzioni del menù
         ArrayList<Libro> mensola = new ArrayList<>();  //lista di libri
         Scanner tastiera = new Scanner(System.in);
         boolean exit = true;
@@ -21,7 +21,11 @@ public class Main {
                     System.out.println("inserisci il titolo del libro che vuoi eliminare");
                     titolo = tastiera.nextLine();
                     FrontEnd.Elimina(mensola,titolo);}
-                case 4 -> exit = false;
+                case 4 -> {
+                    System.out.println("Scorri Libri");
+                    FrontEnd.ScorriLibri(mensola, tastiera);
+                }
+                case 5 -> exit = false;
                 }
         }while(exit);
     }
