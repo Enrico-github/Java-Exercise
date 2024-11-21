@@ -1,0 +1,14 @@
+Stesso nome ma diverso numero e tipi di parametri nella firma del metodo.
+
+mioMetodo(int a, int b)
+{
+
+}
+mioMetodo(int a, int b, int c)  (sovraccarico il metodo)
+{
+
+}
+mioMetodo(int x, int y)    (sbagliato perchè anche se i parametri hanno nomi diversi vengono considerati uguali a quelli del primo metodo perchè il numero di parametri e il loro tipo è uguale)
+{
+
+}
