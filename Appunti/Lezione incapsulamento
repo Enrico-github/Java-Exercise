@@ -1,0 +1,10 @@
+Nell'incapsulamento ho metodi che lavorano sui dati.
+All'interno di una classe ho metodi e attributi pubblici o privati (information hiding).
+
+Classe1                                                                  Classe2
+
+attributi                                                                privati ---x
+classe2 c2;
+
+metodi                                                                   pubblici --->
+Classe2 c2 = new CLasse2  (solitamente dentro il costruttore)
