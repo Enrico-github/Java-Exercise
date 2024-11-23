@@ -37,6 +37,6 @@ public class Main
   public int Main(int argc, char *argv[])
   {
     Studente std1 = new Studente("Enrico");
-    Studente std2 = new Studente("Enrico", "Prearo")
+    Studente std2 = new Studente("Enrico", "Prearo");
   }
 }
