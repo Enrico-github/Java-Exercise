@@ -5,7 +5,7 @@ Public Studente(String nome, String cognome, int media, int eta) throws exceptio
 {
   if(eta<14)
     {
-    throw new exception("età non valida");   //l'eccezzione viene sollevata nel costruttore
+    throw new Exception("età non valida");   //l'eccezzione viene sollevata nel costruttore
     }
   this.nome = nome;
   this.cognome = cognome;
@@ -22,5 +22,16 @@ public static void main(String[] args)  //gestisco l'eccezione nel main
   {
     System.out.println(e.getMessage());
   }
+  int numeroMagico = 88;
+  //qui non si usa il throws Exception nel main perchè l'eccezzione viene sollevata e gestita dal try catch
+  try{                                
+  if(numeroMagico < 100)
+  {
+    throw new Exception("numero minore di 100");
+  }
+  }catch (Exception e)
+    {
+      System.out.println(e.getMessage);
+    }
 }
   }
